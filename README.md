@@ -21,6 +21,10 @@ Cостоит из слоев
 ### Кодогенерация
     protoc -I proto proto/sso/sso.proto --go_out=./gen/go --go_opt=paths=source_relative --go-grpc_out=./gen/go/ --go-grpc_opt=paths=source_relative
 
+или
+
+    task generate
+
 - I proto — опция -I или —proto_path указывает путь к корневой директории с файлами .proto. Это нужно, чтобы компилятор смог найти импорты, если они есть. В нашем случае это директория proto.
 proto/sso/sso.proto — путь к конкретному .proto файлу, который мы компилируем.
 
